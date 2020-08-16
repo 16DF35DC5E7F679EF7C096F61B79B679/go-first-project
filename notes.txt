@@ -1,0 +1,7 @@
+- In encoding/json library, when using json.UnMarshal, all the fields of the destination
+that are needed should be exported.
+
+for index, element := range intArray {
+		fmt.Println(index, "=>", element)
+
+	}

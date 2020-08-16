@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Customizable Harsha Vardhan's Search Engine</title>
+    </head>
+    <body>
+        <h1>Customized Harsha Vardhan's Search Result</h1>
+        <div id="search-result-title">
+            <h2>Search Results for {{.SearchQuery}}</h2>
+            <ol>
+                {{range .Items}}
+                    <li>
+                        <h3>Title: {{.Title}}</h3>
+                        <a href={{.Link}}>{{.Title}}</a>
+                        <p>{{.Snippet}}</p>
+                    </li>
+                {{end}}
+            </ol>
+        </div>
+        <div id="home-button">
+            <form action="/">
+                <input type="submit" value="Home" />
+            </form>
+        </div>
+    </body>
+</html>
